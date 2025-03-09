@@ -74,6 +74,6 @@ For the Tiny-ImageNet dataset, a 4-layer convolutional neural network is adopted
 Should your research employ the methodology or content of AT-BPTT, kindly ensure to cite it accordingly.
 
 ```
-waiting...
+coming soon...
 ```
 
