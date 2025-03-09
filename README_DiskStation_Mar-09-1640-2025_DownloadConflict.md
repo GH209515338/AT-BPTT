@@ -31,24 +31,12 @@ git clone https://github.com/GH209515338/AT-BPTT.git
 conda env create -f environment.yml
 conda activate atbptt
 ```
-### Example Usage
-- To distill on CIFAR-10 with IPC=10
-```python
-python main.py --dataset cifar10 --num_per_class 10 --batch_per_class 10 --num_train_eval 8 --world_size 1 --rank 0 --batch_size 5000 --ddtype curriculum --cctype 2 --epoch 60000 --test_freq 25 --print_freq 10 --arch convnet --window 40 --minwindow 0 --totwindow 200 --inner_optim Adam --inner_lr 0.001 --lr 0.001 --zca --syn_strategy flip_rotate --real_strategy flip_rotate --fname 60_200 --seed 0 -d 10 --mp_distributed
-```
-- To distill on CIFAR-100 with IPC=10
-```python
-python main.py --dataset cifar100 --num_per_class 10 --batch_per_class 1 --train_y --task_sampler_nc 100 --num_train_eval 8 --world_size 1 --rank 0 --batch_size 1000 --ddtype curriculum --cctype 2 --epoch 60000 --test_freq 25 --print_freq 10 --arch convnet --window 100 --minwindow 0 --totwindow 300 --inner_optim Adam --inner_lr 0.001 --lr 0.001 --zca --syn_strategy flip_rotate --real_strategy flip_rotate --fname train_y -d 20 --mp_distributed
-```
-- To distill on Tiny-ImageNet with IPC=10 
-```python
-python main.py --dataset tiny-imagenet-200 --num_per_class 10 --batch_per_class 1 --task_sampler_nc 50 --train_y --num_train_eval 8 --world_size 1 --rank 0 --batch_size 1000 --ddtype curriculum --cctype 2 --epoch 60000 --test_freq 10 --print_freq 10 --arch convnet4 --window 100 --minwindow 0 --totwindow 300 --inner_optim Adam --inner_lr 0.001 --lr 0.0003 --syn_strategy flip_rotate --real_strategy flip_rotate --fname test -d 30 --mp_distributed
-```
-### Citation
-Should your research employ the methodology or content of AT-BPTT, kindly ensure to cite it accordingly.
-```
-waiting...
-```
+3. Example 
+
+
+
+
+
 
 
 
