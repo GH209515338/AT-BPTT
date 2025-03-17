@@ -46,14 +46,27 @@ conda env create -f environment.yml
 conda activate atbptt
 ```
 
+3. You can set the environment variable CUDA_VISIBLE_DEVICES in `main.py`  to specify the visible cuda devices.
+
+```python
+os.environ['CUDA_VISIBLE_DEVICES'] = "0,1"
+```
+
+4. Create two folders in the root directory, `dataset`  (for saving the dataset) and `save`  (for saving the distillation results).
+5. Then you can do the AT-BPTT distillation from the command line.
+
 ### Example Usage
 
 - **To distill on CIFAR-10 with IPC=10**
 
+You can enable zca by adding the `--zca`  and enable distributed training by adding `--mp_distributed` to the command line. At the same time, you can set the value of `--num_per_class` to specify the IPC you want.
+
 ```python
 python main.py --dataset cifar10 --num_per_class 10 --batch_per_class 10 --num_train_eval 8 --world_size 1 --rank 0 --batch_size 5000 --ddtype curriculum --cctype 2 --epoch 60000 --test_freq 25 --print_freq 10 --arch convnet --window 40 --minwindow 0 --totwindow 200 --inner_optim Adam --inner_lr 0.001 --lr 0.001 --zca --syn_strategy flip_rotate --real_strategy flip_rotate --fname 60_200 --seed 0 -d 10 --mp_distributed
 ```
-We set the batch size to 5000, the default window size (window) to 40, the total number of timesteps (totwindow) to 200, and the window control parameter (d) to 10. The learning rates for both inner and outer loops are set to 0.001. Additionally, ZCA whitening is enabled, and distributed training is activated.
+We set the batch size to 5000, the default window size (window) to 40, the total number of timesteps (totwindow) to 200, and the window control parameter (d) to 10. The learning rates for both inner and outer loops are set to 0.001.
+
+This [URL](http://nas.arosy.icu/sharing/1T4kyWbfs)can help you quickly download image datasets for distillation of commonly used datasets.
 
 - **To distill on CIFAR-100 with IPC=10**
 
