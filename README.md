@@ -17,7 +17,7 @@ Our contributions are summarized as follows:
 - We propose an AT-BPTT framework, which seamlessly integrates Dynamic Truncation Position, Adaptive Window Size, and Threshold-guided Stage Transition to optimize the inner-loop training process.
 - Extensive experiments illustrate that AT-BPTT achieves state-of-the-art performance on CIFAR-10 , CIFAR-100 , Tiny-ImageNet and ImageNet-1K  outperforming RaT-BPTT by an average of 2.4\%.
 
-![Method|675](Figure/method.png)
+![Method|675](Figure/IMG_202503179028_804x489.png)
 
 ### Performance
 
