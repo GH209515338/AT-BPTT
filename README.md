@@ -66,7 +66,7 @@ python main.py --dataset cifar10 --num_per_class 10 --batch_per_class 10 --num_t
 ```
 We set the batch size to 5000, the default window size (window) to 40, the total number of timesteps (totwindow) to 200, and the window control parameter (d) to 10. The learning rates for both inner and outer loops are set to 0.001.
 
-This [URL](http://nas.arosy.icu/sharing/1T4kyWbfs)can help you quickly download image datasets for distillation of commonly used datasets.
+This [URL](http://nas.arosy.icu/sharing/1T4kyWbfs) can help you quickly download image datasets for distillation of commonly used datasets.
 
 - **To distill on CIFAR-100 with IPC=10**
 
@@ -89,4 +89,3 @@ Should your research employ the methodology or content of AT-BPTT, kindly ensure
 ```
 coming soon...
 ```
-
